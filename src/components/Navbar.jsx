@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import textContent from '../assets/text.js';
+import moon from './public/moon-solid.svg';
+import sun from './public/sun-solid.svg';
+import navLogo from './public/logoNavbar.png';
 
 function Navbar({handleMode, handleTextLanguage, scrollToSection}) {
     const [darkMode, setDarkMode] = useState(false);
@@ -20,7 +23,7 @@ function Navbar({handleMode, handleTextLanguage, scrollToSection}) {
   return (
     <div className={`h-20 w-full shadow-black shadow-lg flex justify-around items-center p-3 ${!darkMode ? 'light': 'dark'}`}>
         <div className='h-full w-[30%]  flex justify-center items-center xsm:h-[10%]'>
-            <img className='h-full' src="./src/public/logoNavbar.png"/>
+            <img className='h-full' src={navLogo}/>
             <h3 className='text-3xl font-bold'>{currentText.name}</h3>
         </div>
         <div className='flex justify-around items-center h-full w-[60%] text-2xl cursor-pointer'>
@@ -37,9 +40,9 @@ function Navbar({handleMode, handleTextLanguage, scrollToSection}) {
             <div className='h-full w-[50%] flex items-center justify-center'>
                 {
                     (darkMode === true) ? 
-                    (<img className='w-[20%] h-full moon' src='./moon-solid.svg' onClick={handleDarkMode}></img>)
+                    (<img className='w-[20%] h-full moon' src={moon} onClick={handleDarkMode}></img>)
                     :
-                    (<img className='w-[20%] h-full sun' src='./sun-solid.svg' onClick={handleDarkMode}></img>)
+                    (<img className='w-[20%] h-full sun' src={sun} onClick={handleDarkMode}></img>)
                 }
             </div>
         </div>
