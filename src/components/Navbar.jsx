@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import textContent from '../assets/text.js';
 
-function Navbar({handleMode, handleTextLanguage}) {
+function Navbar({handleMode, handleTextLanguage, scrollToSection}) {
     const [darkMode, setDarkMode] = useState(false);
     const [language, setLanguage] = useState(true);
     const handleDarkMode = () => {
@@ -20,14 +20,14 @@ function Navbar({handleMode, handleTextLanguage}) {
   return (
     <div className={`h-20 w-full shadow-black shadow-lg flex justify-around items-center p-3 ${!darkMode ? 'light': 'dark'}`}>
         <div className='h-full w-[30%]  flex justify-center items-center xsm:h-[10%]'>
-            <img className='h-full' src="public/logoNavbar.png"/>
+            <img className='h-full' src="./src/public/logoNavbar.png"/>
             <h3 className='text-3xl font-bold'>{currentText.name}</h3>
         </div>
         <div className='flex justify-around items-center h-full w-[60%] text-2xl cursor-pointer'>
-            <a href='#' className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600 '>{currentText.home}</a>
-            <a href='#' className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600 '>{currentText.skills}</a>
-            <a href='#' className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600 '>{currentText.projects}</a>
-            <a href='#' className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600 '>{currentText.contact}</a>
+            <div onClick={() => scrollToSection('hero')} className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600'>{currentText.home}</div>
+            <div onClick={() => scrollToSection('skills')} className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600'>{currentText.skills}</div>
+            <div onClick={() => scrollToSection('projects')} className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600'>{currentText.projects}</div>
+            <div onClick={() => scrollToSection('contact')} className='h-full transition-all duration-100 ease-in-out flex items-center hover:rounded-2xl w-[20%] justify-center hover:text-white font-normal hover:bg-red-600'>{currentText.contact}</div>
         </div>
         <div className='h-full w-[30%] flex justify-around'>
             <div className='h-full w-[50%] flex items-center justify-center'>
@@ -37,9 +37,9 @@ function Navbar({handleMode, handleTextLanguage}) {
             <div className='h-full w-[50%] flex items-center justify-center'>
                 {
                     (darkMode === true) ? 
-                    (<img className='w-[20%] h-full moon' src='public/moon-solid.svg' onClick={handleDarkMode}></img>)
+                    (<img className='w-[20%] h-full moon' src='./src/public/moon-solid.svg' onClick={handleDarkMode}></img>)
                     :
-                    (<img className='w-[20%] h-full sun' src='public/sun-solid.svg' onClick={handleDarkMode}></img>)
+                    (<img className='w-[20%] h-full sun' src='./src/public/sun-solid.svg' onClick={handleDarkMode}></img>)
                 }
             </div>
         </div>
