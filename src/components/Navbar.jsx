@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import textContent from '../assets/text.js';
-import moon from './public/moon-solid.svg';
-import sun from './public/sun-solid.svg';
-import navLogo from './public/logoNavbar.png';
+import moon from 'src/public/moon-solid.svg';
+import sun from 'src/public/sun-solid.svg';
+import navLogo from 'src/public/logoNavbar.png';
 
 function Navbar({handleMode, handleTextLanguage, scrollToSection}) {
     const [darkMode, setDarkMode] = useState(false);
