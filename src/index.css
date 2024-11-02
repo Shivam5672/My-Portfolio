@@ -73,7 +73,7 @@ body{
 
 .english:after{
   padding: 10px;
-  background-image: url('./english-icon.png');
+  background-image: url('./src/public/english-icon.png');
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ body{
 
 .japanese:after{
   padding: 10px;
-  background-image: url('./japanese-icon.png');
+  background-image: url('./src/public/japanese-icon.png');
   background-position: center;
   background-size: 90%;
   background-repeat: no-repeat;
