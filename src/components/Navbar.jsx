@@ -37,9 +37,9 @@ function Navbar({handleMode, handleTextLanguage, scrollToSection}) {
             <div className='h-full w-[50%] flex items-center justify-center'>
                 {
                     (darkMode === true) ? 
-                    (<img className='w-[20%] h-full moon' src='./src/assets/moon-solid.svg' onClick={handleDarkMode}></img>)
+                    (<img className='w-[20%] h-full moon' src='./moon-solid.svg' onClick={handleDarkMode}></img>)
                     :
-                    (<img className='w-[20%] h-full sun' src='./src/assets/sun-solid.svg' onClick={handleDarkMode}></img>)
+                    (<img className='w-[20%] h-full sun' src='./sun-solid.svg' onClick={handleDarkMode}></img>)
                 }
             </div>
         </div>
