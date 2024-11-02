@@ -8,15 +8,15 @@ function Contact({mode, language}) {
       <h3 className='text-center flex items-center justify-center w-[50%] text-7xl font-bold text-white'>{currentText.SocialLinks}</h3>
       <div className='w-[50%] flex flex-col h-full gap-10'>
         <div className='h-[10%] flex items-center gap-4 w-full justify-end'>
-            <a className='h-full cursor-pointer' href='https://linkedin.com/in/shivam-bansal-341374232/' target='_blank'><img className='h-full w-10' src='./src/public/linkedin.png'></img></a>
+            <a className='h-full cursor-pointer' href='https://linkedin.com/in/shivam-bansal-341374232/' target='_blank'><img className='h-full w-10' src='/linkedin.png'></img></a>
             <h5 className={`w-[50%] cursor-pointer text-white text-left text-2xl font-bold hover:underline`}>{currentText.linkedin}</h5>
         </div>
         <div className='h-[10%] flex items-center gap-4 w-full justify-end'>
-            <a className='h-full cursor-pointer' href='https://github.com/Shivam5672' target='_blank'><img className='h-full w-10' src='./src/public/github.png'></img></a>
+            <a className='h-full cursor-pointer' href='https://github.com/Shivam5672' target='_blank'><img className='h-full w-10' src='/github.png'></img></a>
             <h5 className={`w-[50%] cursor-pointer text-white text-left text-2xl font-bold hover:underline`}>{currentText.Github}</h5>
         </div>
         <div className='h-[10%] flex items-center gap-4 w-full justify-end'>
-            <a className='h-full cursor-pointer' href='https://www.leetcode.com/Shiv_as_Shivam' target='_blank'><img className='h-full w-10' src='./src/public/leetcode.png'></img></a>
+            <a className='h-full cursor-pointer' href='https://www.leetcode.com/Shiv_as_Shivam' target='_blank'><img className='h-full w-10' src='/leetcode.png'></img></a>
             <h5 className={`w-[50%] cursor-pointer text-white text-left text-2xl font-bold hover:underline`}>{currentText.leetcode}</h5>
         </div>
       </div>

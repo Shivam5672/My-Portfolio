@@ -17,7 +17,7 @@ function Skills({ mode, language }) {
           >
             <img 
               className='object-center w-full transition-all duration-200 hover:shadow-xl' 
-              src={`./src/public/${skill}`} 
+              src={`/${skill}`} 
               alt={`${skill} icon`}
             />
           </div>
