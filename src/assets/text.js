@@ -6,7 +6,7 @@ const textContent = {
         projects: 'Projects',
         contact: 'Contact',
         name: 'Shivam Bansal',
-        heroHeading: 'I am Front-End Engineer',
+        heroHeading: 'I am a Front-End Engineer',
         heroPara: 'Crafting interactive, visually engaging experiences with a focus on usability, performance, and modern design.',
         heroDownloadResume:'Download Resume',
         heroEmailMe: 'Email Me',

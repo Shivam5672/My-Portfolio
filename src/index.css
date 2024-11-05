@@ -108,3 +108,7 @@ body{
   opacity: 1;
   transform: translateX(0); 
 }
+
+.hero{
+  background-image: linear-gradient(to right, #5732cd 0%, #e15858 100%);
+}
