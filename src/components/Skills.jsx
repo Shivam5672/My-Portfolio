@@ -6,10 +6,9 @@ function Skills({ mode, language }) {
   const currentText = language ? textContent.english : textContent.japanese;
   const skillRefs = useRef([]);
 
-  // Observer setup for scroll reveal effect
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.3, // Trigger when 30% of the element is visible
+      threshold: 0.3,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -42,18 +41,23 @@ function Skills({ mode, language }) {
           <div 
             key={index}
             ref={(el) => skillRefs.current[index] = el}
-            className='flex justify-center items-center rounded-full w-[40%] transition-transform duration-300 ease-in-out opacity-0 transform translate-y-5 skill' // Initial hidden state
+            className='relative flex justify-center items-center rounded-full w-[40%] transition-transform duration-300 ease-in-out opacity-0 transform translate-y-5 skill' // Initial hidden state
           >
             <img 
-              className='object-center w-full transition-all duration-200 hover:shadow-xl' 
+              className='relative object-center w-full transition-all duration-200 hover:shadow-xl'
               src={`/${skill}`} 
               alt={`${skill} icon`}
             />
+            <div className='w-full h-full bottom-12 absolute top-0 p-2 flex justify-center items-center rounded-full bg-[#00000053] text-[#757373] transform transition-opacity duration-300 opacity-0 hover:opacity-100'>
+              <p className='text-white font-bold text-2xl'>
+                {skill.split('.')[0]}
+              </p>
+            </div>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default Skills;
