@@ -4,7 +4,7 @@ import textContent from '../assets/text';
 function Hero({mode, language}) {
     const currentText = language === true ? textContent.english : textContent.japanese;
   return (
-    <div className={`hero w-[100%] min-h-[90vh] justify-center flex p-10 ${!mode === true ? 'light' : 'dark'} shadow-none`}>
+    <div className={`w-[100%] min-h-[90vh] justify-center flex p-10 ${!mode === true ? 'light' : 'dark'} shadow-none`}>
       <div className='flex flex-col w-[50%] gap-10 justify-center items-center'>
         <h1 className='text-center font-bold text-7xl w-max text-white'>{currentText.heroHeading}</h1>
         <p className='text-3xl text-white text-center'>{currentText.heroPara}</p>

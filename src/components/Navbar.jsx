@@ -18,7 +18,7 @@ function Navbar({handleMode, handleTextLanguage, scrollToSection}) {
     }, [language, handleTextLanguage]);
     const currentText = language ? textContent.english : textContent.japanese;
   return (
-    <div className={`h-20 w-full shadow-black shadow-lg flex justify-around items-center p-3 ${!darkMode ? 'light': 'dark'}`}>
+    <div className={`h-20 w-full shadow-black shadow-lg flex justify-around items-center p-3 ${!darkMode ? '': 'dark'}`}>
         <div className='h-full w-[30%]  flex justify-center items-center xsm:h-[10%]'>
             <img className='h-full' src="/logoNavbar.png"/>
             <h3 className='text-3xl font-bold'>{currentText.name}</h3>
